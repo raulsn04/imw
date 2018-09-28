@@ -42,3 +42,7 @@ Añadi unas imagenes de las series subiendolas desde el remoto al cloud.
 Añadi las imagenes al index.html
 
 ![img](img/10.PNG)
+
+Y comprobamos en la pagina
+
+![img](img/11.PNG)
