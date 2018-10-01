@@ -6,7 +6,7 @@ En esta actividad vamos a permitir el acceso  al contenido de un subdirectorio d
 
 Accedemos al cloud  y dentro de la ruta de webapps creamos la carpeta shared para almacenar los ficheros.
 
-![img](0.PNG)
+![img](img/0.PNG)
 
 ## Creación del location
 
