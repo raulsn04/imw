@@ -10,7 +10,7 @@ Accedemos al cloud  y dentro de la ruta de webapps creamos la carpeta shared par
 
 ## Creación del location
 
-Accedemos a la ruta /etc/nginx/sites-available/alu6421.me y añadimos el location de /shared
+Accedemos a la ruta /etc/nginx/sites-available/alu6421.me y añadimos el location de **/shared**
 y le añadimos **autoindex on**.
 
 ![img](img/1.PNG)
