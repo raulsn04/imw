@@ -187,4 +187,27 @@ Enlazamos el fichero para que esté disponible y recargamos el servicio.
  Ahora creamos la carpeta target y dentro de ella hacemos un **wget** al enlace del zip para obtenerlo y poder mostrar la web.
 
  ![imagenes](imagenes/62.PNG)
- 
+
+Descomprimimos el zip.
+
+![imagenes](imagenes/63.PNG)
+
+Accedemos a la carpeta y extraemos los ficheros a target.
+
+![imagenes](imagenes/64.PNG)
+
+Extraemos las carpetas a target.
+
+![imagenes](imagenes/65.PNG)
+
+Comprobamos que la web funciona.
+
+![imagenes](imagenes/66.PNG)
+
+Añadimos los logfiles.
+
+![imagenes](imagenes/67.PNG)
+
+Comprobamos que se han creado.
+
+![imagenes](imagenes/68.PNG)
