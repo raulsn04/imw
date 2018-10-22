@@ -26,7 +26,7 @@ Ejecutamos la herramienta unzip y extraemos los archivos del zip.
 
 Ahora accedemos al directorio que hemos descomprimido y extraemos los archivos al directorio php.
 
-![](imagenes.5.PNG)
+![](imagenes/5.PNG)
 
 Comprobamos que la web funciona correctamente.
 
@@ -48,14 +48,63 @@ Enlazamos el virtual host para habilitarlo, accedemos a la ruta /etc/nginx/sites
 
 ![](imagenes/12.PNG)
 
-Accedemos a la ruta */webapps/now* y creamos now.py con el siguiente código.
+Accedemos a la ruta */webapps/now* y creamos *now.py* con el siguiente código.
 
 ![](imagenes/14.PNG)
 
 Lanzamos el proceso *uwsgi --socket :8081 --protocol http --home $(pipenv --venv) -w now:app* para que escuche las peticiones.
 
+![](imagenes/15.1.PNG)
 ![](imagenes/15.PNG)
 
 Comprobamos que funciona.
 
 ![](imagenes/16.PNG)
+
+Creamos un script llamado *run.sh* para que sintetice el comando que hemos creado en *now.py*, le indicamos que escuche el puerto *8081*.
+
+![](imagenes/17.PNG)
+
+Le damos permisos de ejecución.
+
+![](imagenes/18.PNG)
+
+Ejecutamos *run.sh* y comprobamos que esta funcionando y que ya se encuentra el puerto *8081* en esucha.
+
+![](imagenes/19.PNG)
+
+En el entorno virtual instalamos los paquetes Flask y pytz, ambos deben residir en */home/webapps/now.*
+
+![](imagenes/20.PNG)
+
+![](imagenes/21.PNG)
+
+Configuramos **supervisor** para que gestione el proceso *uwsgi*, indicamos las rutas correctas.
+
+![](imagenes/22.PNG)
+
+Comprobamos que se ha creado y reinciamos **supervisor**.
+
+![](imagenes/23.PNG)
+
+Accedemos a la web solo con la ruta http://now.alu6124.me sin poner el puerto *8081* para comprobar que funciona correctamente.
+
+![](imagenes/24.PNG)
+
+Comprobamos los siguientes comandos y la respuesta del navergador.
+
+**supervisorctl status**
+
+![](imagenes/25.PNG)
+
+**supervisorctl start now**
+
+![](imagenes/28.PNG)
+
+**supervisorctl stop now**
+
+![](imagenes/26.PNG)
+
+**supervisorctl restart now**
+
+![](imagenes/27.PNG)
