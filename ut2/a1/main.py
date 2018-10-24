@@ -12,7 +12,12 @@ billetes5= resto10 // 5
 resto5= importe % 5
 
 if importe !=0:
-    if resto == 1:
-        print(billetes50)
-    if importe > 1:
-        print(billetes20)
+    if billetes50 == 1:
+        print(billetes50, 'billetes de 50')
+    if billetes50 > 1:
+        print(billetes50, 'billetes de 50')
+if importe !=0:
+    if billetes20 == 1:
+        print(billetes20, 'billetes de 20')
+    if billetes20 > 1:
+        print(billetes20, 'billetes de 20')
