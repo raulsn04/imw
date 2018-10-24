@@ -17,7 +17,7 @@ if importe !=0:
     if billetes50 > 1:
         print(billetes50, 'billetes de 50')
 if importe !=0:
-    if billetes20 == 1:
+    if resto50 == 1:
         print(billetes20, 'billetes de 20')
-    if billetes20 > 1:
+    if resto50 > 1:
         print(billetes20, 'billetes de 20')
