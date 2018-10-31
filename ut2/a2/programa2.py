@@ -11,5 +11,5 @@ if d < d2:
     print(d, 'Está más cercano  a' (x1-x2), 'es' (y1-y2), 'y está a una distancia de', d)
 
 
-else d2 > d
+else d2 < d
     print(d2, 'El punto más cercano a' (x1-x3), 'es' (y1-y3), 'y está a una distancia de', d2)
