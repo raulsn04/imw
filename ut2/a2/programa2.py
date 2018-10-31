@@ -12,4 +12,4 @@ if d < d1:
 
 
 else d1 < d
-    print(d2, 'El punto más cercano a' (x1-x3), 'es' (y1-y3), 'y está a una distancia de', d1)
+    print(d1, 'El punto más cercano a' (x1-x3), 'es' (y1-y3), 'y está a una distancia de', d1)
