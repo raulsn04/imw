@@ -16,6 +16,6 @@ else:
         sys.exit('Cerrando programa')
 
     for a in range(min, 0 , -1):
-        if calc % a == 0 and calc1 % c == 0:
+        if calc % a == 0 and calc1 % a == 0:
             print('el maximo comun divisor es', a)
             break
