@@ -16,7 +16,7 @@ for var in sequence:
         Thymine += 1
     elif var == 'G':
         Guanine += 1
-    elif var == 'C':
+    else:
         Cytosine += 1
 
 
