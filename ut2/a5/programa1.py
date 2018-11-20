@@ -51,49 +51,63 @@ def num_digits(text):
 
 def num_words(text):
 
-    palabras = 0
-    return
+    numeropalabras = text.split(' ')
+    return len(numeropalabras)
 
 
 def reverse(text):
 
+    reverse = text[::-1]
 
-    return
+    return reverse
 
 
 def length(text):
 
-    longitud = 0
-
-    for i in text:
-        if len(text) == 0:
-            longitud = len(text)
-            longitud += 1
-
-    return longitud
+    return len(text)
 
 
 def halfs(text):
+
     mitad = int(len(text) /2)
     longitud = len(text)
     parteinicio =(text[0:mitad])
     partefinal = text[mitad:longitud]
+
     return parteinicio + ' | ' + partefinal
 
 
 def upper_vowels(text):
-    return
+
+    vocales = "aeoiu"
+    texto = ''
+
+    for i in text:
+        if i in vocales:
+            texto += i.upper()
+        else:
+            texto += i
+    return texto
 
 
 def sorted_by_words(text):
+
     sorted = text.split()
     sorted.sort()
-    return sorted
+    ordenado = ' '.join(sorted)
+    return ordenado
 
 
 def length_of_words(text):
-    # ...
-    return
+
+    longitud = text.split(' ')
+    palabra = []
+
+    for i in longitud:
+        palabra.append(str(len(i)))
+    recuento = ' '.join(palabra)
+
+    return recuento
 
 
 text = sys.argv[1]
