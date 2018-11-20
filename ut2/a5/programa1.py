@@ -57,12 +57,8 @@ def num_words(text):
 
 def reverse(text):
 
-    reverso = 0
 
-    for i in range (-1, 0):
-        if i in reverso:
-
-    return reverso
+    return
 
 
 def length(text):
@@ -78,8 +74,11 @@ def length(text):
 
 
 def halfs(text):
-    # ...
-    return
+    mitad = int(len(text) /2)
+    longitud = len(text)
+    parteinicio =(text[0:mitad])
+    partefinal = text[mitad:longitud]
+    return parteinicio + ' | ' + partefinal
 
 
 def upper_vowels(text):
@@ -87,8 +86,9 @@ def upper_vowels(text):
 
 
 def sorted_by_words(text):
-    # ...
-    return
+    sorted = text.split()
+    sorted.sort()
+    return sorted
 
 
 def length_of_words(text):
