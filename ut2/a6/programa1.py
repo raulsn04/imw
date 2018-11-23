@@ -14,4 +14,5 @@ def count_words(sentence):
 
     return summary
 sentence = sys.argv[1]
-for clave, valor in 
+for clave, valor in (count_words(sentence)).items():
+    print(clave, ':', valor)
