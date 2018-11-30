@@ -42,7 +42,7 @@ class VirtualMachine:
             'hdd' : hdd
         }
         self.proc.append(procesos)
-
+        print(f'El proceso con el pid {pid} se está ejecutando ')
     def ram_usage(self):
         ram = 0
         for procesos in self.proc:
@@ -66,7 +66,7 @@ class VirtualMachine:
 
 
     def __str__(self):
-        return "Sistema {} memoria ram usada {} cpu usada {} HDD usado {} estado de la máquina {}".format(
+        return "Sistema {} memoria ram usada {}% cpu usada {}% HDD usado {}% estado de la máquina {}".format(
         self.os, self.ram_usage(), self.cpu_usage(), self.hdd_usage(), self.estado())
 
 
@@ -81,6 +81,7 @@ if __name__ == '__main__':
     print(vm1)
     vm1.stop()
     print(vm1)
+    print()
 
     vm2 = VirtualMachine('Rohan', 6, 1.9, 250, 'Debian')
     print(vm2)
@@ -92,6 +93,7 @@ if __name__ == '__main__':
     print(vm2)
     vm2.stop()
     print(vm2)
+    print()
 
     vm3 = VirtualMachine('Rivendel', 16, 3, 100, 'OpenSuse')
     print(vm3)
