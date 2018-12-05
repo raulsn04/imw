@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Principal</title>
+        <link rel='stylesheet' type='text/css' href='/static/style.css'/>
+    </head>
+    <body>
+        <h1>{{ vmachine.name }}</h1>
+        <h3>{{ vmachine.os }}</h3>
+
+        <div>
+            <p>{{ vmachine.get_status() }}</p>
+        </div>
+        <div>
+                    <a href="/change_status/0"></a>
+                    <a href="/change_status/1"></a>
+                    <a href="/change_status/2"></a>
+                </div>
+
+        <table>
+          <tr>
+            <td colspan="2"></td>
+            <td><strong>TOTAL</strong></td>
+            <td><strong>%USADO</strong></td>
+          </tr>
+
+          <tr>
+            <td colspan="2">RAM</td>
+            <td>{{ vmachine.ram }}GB</td>
+            <td>{{ vmachine.ram_usage() }}%</td>
+          </tr>
+
+          <tr>
+            <td colspan="2">CPU</td>
+            <td>{{ vmachine.cpu}}Ghz</td>
+            <td>{{ vmachine.cpu_usage() }}%</td>
+          </tr>
+
+          <tr>
+            <td colspan="2">HDD</td>
+            <td>{{ vmachine.hdd }}MB</td>
+            <td>{{ vmachine.hdd_usage() }}%</td>
+          </tr>
+        </table>
+
+        <a href="/run_process">Lanzar proceso</a>
+
+        <table>
+          <tr>
+            <td>Proceso {{ proc["pid"] }}</td>
+          </tr>
+
+          <tr>
+            <td>RAM: {{ proc["ram"] }}GB</td>
+            <td>CPU: {{ proc["cpu"] }}Ghz</td>
+            <td>HDD: {{ proc["hdd"] }}MB</td>
+
+    </body>
+</html>
