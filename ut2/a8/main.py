@@ -15,19 +15,23 @@ def index():
 
 @app.route('/change_status/<new_status>')
 def change_status(new_status):
-    vmachine.status = new_status()
-
+    if new_status == '0':
+        vmachine.stop()
+    elif new_status == '1':
+        vmachine.start()
+    else:
+        vmachine.suspend()
     return redirect('/')
 
 
 @app.route('/run_process', methods=['GET', 'POST'])
 def run_process():
     if request.method == 'POST':
-        do_the_run_process(
-            request.form["PID"],
-            request.form["RAM"],
-            request.form["CPU"],
-            request.form["HDD"]
+        vmachine.run(
+            pid = int(request.form["PID"]),
+            ram = float(request.form["RAM"]),
+            cpu = float(request.form["CPU"]),
+            hdd = float(request.form["HDD"])
         )
         return redirect('/')
     else:

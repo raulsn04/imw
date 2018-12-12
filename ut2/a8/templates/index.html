@@ -11,9 +11,9 @@
             <p>{{ vmachine.get_status() }}</p>
         </div>
         <div>
-                    <a href="/change_status/0"></a>
-                    <a href="/change_status/1"></a>
-                    <a href="/change_status/2"></a>
+                    <a href="/change_status/0">Parar</a>
+                    <a href="/change_status/1">Arrancar</a>
+                    <a href="/change_status/2">Suspender</a>
                 </div>
 
         <table>
@@ -25,34 +25,35 @@
 
           <tr>
             <td colspan="2">RAM</td>
-            <td>{{ vmachine.ram }}GB</td>
+            <td>{{ vmachine.ram }} GB</td>
             <td>{{ vmachine.ram_usage() }}%</td>
           </tr>
 
           <tr>
             <td colspan="2">CPU</td>
-            <td>{{ vmachine.cpu}}Ghz</td>
+            <td>{{ vmachine.cpu}} Ghz</td>
             <td>{{ vmachine.cpu_usage() }}%</td>
           </tr>
 
           <tr>
             <td colspan="2">HDD</td>
-            <td>{{ vmachine.hdd }}MB</td>
+            <td>{{ vmachine.hdd }} MB</td>
             <td>{{ vmachine.hdd_usage() }}%</td>
           </tr>
         </table>
 
         <a href="/run_process">Lanzar proceso</a>
 
+        {% for proc in vmachine.proc %}
         <table>
           <tr>
-            <td>Proceso {{ proc["pid"] }}</td>
+            <td>Proceso {{proc.pid}}</td>
           </tr>
-
           <tr>
-            <td>RAM: {{ proc["ram"] }}GB</td>
-            <td>CPU: {{ proc["cpu"] }}Ghz</td>
-            <td>HDD: {{ proc["hdd"] }}MB</td>
+            <td>RAM: {{proc.ram}} GB | CPU: {{proc.cpu }} Ghz | HDD: {{proc.hdd}} MB</td>
+          </tr>
+        </table>
+        {% endfor %}
 
     </body>
 </html>
