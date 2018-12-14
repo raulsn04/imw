@@ -1,3 +1,44 @@
- class="estado"
+global {
+  background-color: #EE82EE;
+  border: 2px;
+  border-color: #4B0082;
+  border-style: groove;
+}
+global.h3 {
+  color: #8B008B;
+}
 
-  class="cambio_estado"
+status_now {
+  color: #9370DB;
+  text-align: left;
+}
+
+change_status {
+  color: #8B008B;
+  text-align: right;
+}
+
+comparative_table {
+  border-style: ridge;
+  border: 2px;
+  border-color: #7B68EE;
+  border-radius: 1px;
+  background-color: #9370DB;
+}
+
+especial {
+  text-decoration-color: white;
+  background-color: #DDA0DD;
+    
+}
+
+run_process {
+  color: #8B008B;
+  text-align: left;
+}
+
+show_process {
+  border-collapse: collapse;
+  text-align: left;
+
+}

@@ -4,19 +4,22 @@
         <link rel='stylesheet' type='text/css' href='/static/style.css'/>
     </head>
     <body>
+
+      <div class="gobal">
         <h1>{{ vmachine.name }}</h1>
         <h3>{{ vmachine.os }}</h3>
 
-        <div>
+        <div class="status_now">
             <p>{{ vmachine.get_status() }}</p>
         </div>
-        <div>
-                    <a href="/change_status/0">Parar</a>
-                    <a href="/change_status/1">Arrancar</a>
-                    <a href="/change_status/2">Suspender</a>
-                </div>
 
-        <table>
+        <div class="change_status">
+          <a href="/change_status/0">Parar</a>
+          <a href="/change_status/1">Arrancar</a>
+          <a href="/change_status/2">Suspender</a>
+        </div>
+
+        <table class="comparative_table">
           <tr>
             <td colspan="2"></td>
             <td><strong>TOTAL</strong></td>
@@ -42,18 +45,20 @@
           </tr>
         </table>
 
-        <a href="/run_process">Lanzar proceso</a>
+        <a href="/run_process" class="run_process">Lanzar proceso</a>
 
         {% for proc in vmachine.proc %}
-        <table>
-          <tr>
+        <table class="show_process">
+          <tr class="especial">
             <td>Proceso {{proc.pid}}</td>
           </tr>
+
           <tr>
             <td>RAM: {{proc.ram}} GB | CPU: {{proc.cpu }} Ghz | HDD: {{proc.hdd}} MB</td>
           </tr>
         </table>
         {% endfor %}
+      </div>
 
     </body>
 </html>
