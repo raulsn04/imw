@@ -6,9 +6,9 @@ class DB():
         self.connection = pymysql.connect(
             host='localhost',
             port=3306,
-            user=username,
-            password=password,
-            db=database,
+            user='emmet',
+            password='Brownbrown1+',
+            db='vmweb',
             charset='utf8mb4',
             cursorclass=pymysql.cursors.DictCursor,
             autocommit=True

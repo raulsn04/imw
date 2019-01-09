@@ -3,21 +3,10 @@ from flask import render_template
 from flask import redirect
 from flask import request
 from vm import VirtualMachine
-from mysql import DB
+
 
 app = Flask(__name__)
 vmachine = VirtualMachine(1)
-
-db = DB('emmet', 'Brownbrown1+', 'vmweb')
-
-cmd = input('Introduzca el comando: ')
-desc = input('Introduzca la descripción: ')
-
-sql = f"insert into commands values ('{cmd}', '{desc}')"
-db.run(sql)
-
-sql = 'select * from commands order by name'
-print(db.run(sql))
 
 @app.route("/")
 def index():
