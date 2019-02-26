@@ -6,6 +6,11 @@
 
 Que la IA te habla mientras intenta adivnar lo que dibujamos y es muy variado su contenido de dibujos.
 
+Nos da un margen de 20 segundos, muestra lo que debemos dibujas, muestra la opción de borrar, pasar a la siguiente o cancelar.
+
+![](imagen/3.PNG)
+
+
 ####Características de la herramienta
 
 ![](imagen/0.PNG)
